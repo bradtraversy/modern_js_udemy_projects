@@ -30,17 +30,79 @@
 
 //STRINGS AND ... STRINGS
 
-const firstName = 'William';
-const lastName = 'Johnson';
+// const firstName = 'William';
+// const lastName = 'Johnson';
+// const age = 36;
+// const str = 'Hello there my name is Brad';
+// const tags = 'web design,web developement,programming'
 
-let val;
+// let val;
 
-val = firstName + lastName;
-//Concatenation
-val = firstName + ' ' + lastName;
-//Append
-val = 'Leo';
-val = 'Ramchandani';
+// val = firstName + lastName; //simple addition
 
+// //Concatenation
+// val = firstName + ' ' + lastName;
+// //Append
+// val = 'Leo';
+// val += 'Ramchandani';
 
-console.log(val);
+// val = 'Hello, my name is ' + firstName + ' and I am ' + age;
+
+// //Escaping
+// val = 'That\'s awesome, i can\'t wait!!!';
+
+// //Length
+// val = firstName.length;
+
+// //concat
+// val = firstName.concat(' ',lastName);
+
+// //to change case
+// val = firstName.toUpperCase();
+// val = firstName.toLowerCase();
+
+// val = firstName[2];
+
+// //IndexOf()
+// val = firstName.indexOf('l');
+
+// val = firstName.lastIndexOf('l');
+
+// //charAt()
+// val = firstName.charAt('2');
+
+// //Get last character
+// val = firstName.charAt(firstName.length - 1);
+
+// //substrings()
+// val = firstName.substring(0,4);
+
+// //slice()
+// val = firstName.slice(0,3);
+// val = firstName.slice(-3);
+
+// //split()
+// val = str.split(' ');
+// val = tags.split(',');
+
+// //replace
+// val = str.replace('Brad','Jack');
+
+// //includes()
+// val = str.includes('food');
+// val = str.includes('Hello');
+
+// console.log(val);
+
+//TEMPLATE LITERALS
+
+const name = 'John';
+const age = 30;
+const job = 'Web Developer';
+const city = 'Miami';
+let html;
+
+//Without template strings (es5)
+html = '<ul>name</ul>'
+
+document.body.innerHTML = html;
