@@ -2,7 +2,13 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"name": "MacStadium Admin",
+			"path": "../../../MacStadium Admin"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "modern_js_udemy_projects"
+	}
 }

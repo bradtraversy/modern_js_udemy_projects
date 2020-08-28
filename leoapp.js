@@ -1,3 +1,6 @@
+
+
+/*
 // //NUMBERS AND MATH OPERATORS
 
 // const num1 = 100;
@@ -95,14 +98,48 @@
 // console.log(val);
 
 //TEMPLATE LITERALS
+// const name = 'John';
+// const age = 31;
+// const job = 'Web Developer';
+// const city = 'Miami';
 
-const name = 'John';
-const age = 30;
-const job = 'Web Developer';
-const city = 'Miami';
-let html;
+// let html;
 
-//Without template strings (es5)
-html = '<ul>name</ul>'
+// //Without template strings (es5)
+// html = '<ul>' +
+//        '<li>Name: ' + name + '</li>' +
+//        '<li>Name: ' + age + '</li>' +
+//        '<li>Name: ' + job + '</li>' +
+//        '<li>Name: ' + city + '</li>'+
+//        '</ul>';
 
-document.body.innerHTML = html;
+//with template strings (es6 or Template Literals) - its like ur putting it into a template :D
+// html = `
+//   <ul>
+//   <li>Name: ${name}</li>
+//   <li>Age: ${age}</li>
+//   <li>Job: ${job}</li>
+//   <li>City: ${city}</li>
+//   <li>${2+2}</li>
+//   <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+//     </ul>
+//     `;
+
+// document.body.innerHTML = html;
+
+*/
+
+//ARRAYS
+//Create some arrays
+const numbers = [43,23,16,56,32,44,36,5];
+const numbers2 = new Array(22, 45,33,76,54); //another way to create arrays
+
+const fruit = ['APple','Banana','Orange','Pear'];
+const mixed = [22, 'Hello',true,undefined,null,{a:1, b:1},new Date()];
+
+// console.log(mixed);
+
+let val;
+
+console.log(numbers);
+console.log(val);
