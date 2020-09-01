@@ -6,6 +6,9 @@
 		{
 			"name": "MacStadium Admin",
 			"path": "../../../MacStadium Admin"
+		},
+		{
+			"path": "../msns"
 		}
 	],
 	"settings": {

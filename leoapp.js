@@ -131,7 +131,7 @@
 
 //ARRAYS
 //Create some arrays
-const numbers = [43,23,16,56,32,44,36,5];
+const numbers = [43,23,16,56,32,44,36];
 const numbers2 = new Array(22, 45,33,76,54); //another way to create arrays
 
 const fruit = ['APple','Banana','Orange','Pear'];
@@ -140,6 +140,12 @@ const mixed = [22, 'Hello',true,undefined,null,{a:1, b:1},new Date()];
 // console.log(mixed);
 
 let val;
+
+//Get array length
+val = numbers.length;
+
+//Check if is array
+val = Array.isArray(numbers);
 
 console.log(numbers);
 console.log(val);
