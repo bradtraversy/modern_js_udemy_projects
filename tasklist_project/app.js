@@ -59,6 +59,7 @@ function addTask(e) {
   }
 
   // Create li element
+  else {
   const li = document.createElement('li');
   // Add class
   li.className = 'collection-item';
@@ -75,7 +76,7 @@ function addTask(e) {
 
   // Append li to ul
   taskList.appendChild(li);
-
+  }
   // Store in LS
   storeTaskInLocalStorage(taskInput.value);
 
