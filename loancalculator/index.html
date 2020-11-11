@@ -12,6 +12,12 @@
       #loading, #results {
         display:none;
       }
+      .currency {
+        background:transparent;
+        border: none;
+        outline: none;
+        opacity: 0.7;
+      }
     </style>
   </head>
   <body class="bg-dark">
@@ -23,7 +29,17 @@
             <form id="loan-form">
               <div class="form-group">
                 <div class="input-group">
-                  <span class="input-group-addon">$</span>
+                  <span class="input-group-addon">
+                    <select class="currency">
+                      <option value="USD" selected>$</option>
+                      <option value="EUR">€</option>
+                      <option value="GBP">£</option>
+                      <option value="JPY">¥</option>
+                      <option value="INR">₹</option>
+                      <option value="KRW">₩</option>
+                      <option value="BRL">R$</option>
+                    </select>
+                  </span>
                   <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
                 </div>
               </div>
@@ -36,7 +52,7 @@
               <div class="form-group">
                 <input type="number" class="form-control" id="years" placeholder="Years To Repay">
               </div>
-              <div class="forn-group">
+              <div class="form-group">
                 <input type="submit" value="Calculate" class="btn btn-dark btn-block">
               </div>
             </form>
