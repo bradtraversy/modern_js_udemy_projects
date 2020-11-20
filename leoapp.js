@@ -254,5 +254,307 @@
 //   console.log(people[i].name);
 // }
 
-//WORKING WITH DATES AND TIMES IN JAVASCRIPT
+// //WORKING WITH DATES AND TIMES IN JAVASCRIPT
+
+// let val;
+
+// const today = new Date();
+// let birthday = new Date('9-10-1981 11:35:00');
+// birthday = new Date('September 10 1981');
+// birthday = new Date('9/10/1988');
+
+// val = today.getMonth()+1;
+// val = today.getDate();
+// val = today.getDay();
+// val = today.getFullYear();
+// val = today.getHours();
+// val = today.getMinutes();
+// val = today.getSeconds();
+// val = today.getMilliseconds();
+// val = today.getTime();
+// console.log(val);
+
+// birthday.setMonth(2);
+// birthday.setDate(12);
+// birthday.setFullYear(1985);
+// birthday.setHours(17);
+// birthday.setMinutes(30);
+// birthday.setSeconds(22);
+
+// console.log(birthday);
+
+//IF Statements and Comparison Operators
+// if(something){
+//   do something}else {
+//     do something else
+//   }
+// }
+
+// const id='100';
+
+// //Equal to
+// if(id == 100){
+// console.log("correct");
+// } else {
+//   console.log('incorrect');
+// }
+
+// //Not equal to
+// if(id != 101){
+//   console.log("correct");
+//   } else {
+//     console.log('incorrect');
+//   }
+
+//   //Most times u want to test the value and the type
+//   if(id === 100){
+//     console.log("correct");
+//     } else {
+//       console.log('incorrect');
+//     }
+
+//     //Not equal to value and type
+//     if(id !== 100){
+//       console.log("correct");
+//       } else {
+//         console.log('incorrect');
+//       }
+
+// //Test if undefined
+// if(typeof id === 'undefined'){
+// console.log(`The ID is ${id}`); //template literal
+// } else{
+//   console.log('No ID');
+// }
+
+//GREATER OR LESS THAN
+// if(id > 100){
+//   console.log("correct");
+//   } else {
+//     console.log('incorrect');
+//   }
+
+// const color = 'yellow';
+
+// if(color==='red'){
+//   console.log('Color is red');
+// } else if(color === 'blue'){
+//   console.log('Color is blue');
+// } else{
+//   console.log('Color not red or blue');
+// }
+
+// //Logical Operators
+// const name = 'steve';
+// const age = 70;
+
+// //AND &&
+// if(age>0 && age<12){
+//   console.log(`${name} is a child`)
+// }else if(age >= 13 && age <= 19){
+//   console.log(`${name} is a teenager`);
+// } else {
+//   console.log(`${name} is an adult!`)
+// };
+
+// // OR ||
+// if(age <16 || age>65){
+//   console.log(`${name} cannot run in race`);
+// } else {
+//   console.log(`${name} is registered for the race!`);
+// }
+
+// //TERNARY Opertaor //shorthand way of doing conditionals
+// const id = 100;
+// console.log(id === 100 ? 'Correct' : 'Incorrect');
+
+// //Without Braces
+// if(id === 100)
+//   console.log('correct');
+// else
+//   console.log('incorrect'); //possible but suggested to stick with curly braces
+
+
+// //SWITCHES
+// const color = 'green';
+
+// switch(color){ //inside the parenthese what you want to test
+//   case 'red':
+//       console.log('Color is red');
+//       break;
+//   case 'blue':
+//       console.log('Color is blue');
+//       break;
+//   default:
+//     console.log('Color is not red or blue');
+// }
+
+// //Use switch for lots of different cases
+
+// let day;
+
+// switch(new Date().getDay()){
+//   case 0:
+//     day = 'Sunday';
+//     break;
+//   case 1:
+//       day = 'Mon';
+//       break;
+//   case 2:
+//       day = 'Tue';
+//       break;
+//   case 3:
+//       day = 'Wed';
+//       break;
+//   case 4:
+//       day = 'Thu';
+//       break;
+//   case 5:
+//       day = 'Fri';
+//       break;
+//   case 6:
+//       day = 'Fri';
+//       break;
+// }
+
+// console.log(`Today is ${day}`);
+
+
+//FUNCTION DECLARATIONS AND FUNCTION EXPRESSIONS
+
+// function greet(){
+//   //console.log('Jello');
+//   return 'Hello';
+// }
+
+// // greet(); this is what calls the function!!!
+
+// console.log(greet());
+
+// function greet(firstName = 'John', lastName = 'Doe'){ //This allows default values instead of the text in the next line
+//   // if(typeof firstName === 'undefined'){firstName : 'John'}
+//   // if(typeof lastName === 'undefined'){lastName : 'Doe'}
+//   //console.log('Jello');
+//   return 'Hello ' + firstName + ' ' + lastName;
+// }
+
+// greet();
+
+// console.log(greet('Steve','Smith')); //values here overwrite the parameter default values in the function
+
+// console.log(greet());
+
+
+//Function expressions
+
+// const square = function(){//this is called an anonymous function because we didn't write something like const square = function square(){}
+
+// };
+
+// const square = function(x){
+//   return x*x;
+// }; //here because it really is a variable, you have to place the semi-colon
+
+// console.log(square(8));
+
+// const square = function(x=3){//when specifying default value
+//   return x*x;
+// }; //here because it really is a variable, you have to place the semi-colon
+
+// console.log(square());
+
+//Immediately invokable function expressions - IIFEs
+//basically a functiont aht you declare and run at the same time
+//to do this make it an expression and place it in parenthese
+
+// (function(){
+//   console.log('IIFE Ran..');
+// })();
+
+// (function(name){
+//   console.log('Hello ' + name);
+// })('Brad');//Useful when it comes to module pattern - in the calorie counter application . One of Brad's favorite design patterns
+
+//Property Methods
+
+//When a function is inside an object, it is called a method.
+
+// const todo = {
+//   add: function(){
+//     console.log('Add todo..');
+//   },
+//   edit: function(id){
+//     console.log(`Edit todo ${id}`);
+//   }
+// }
+
+// todo.delete = function(){
+//   console.log('Delete todo....');
+// }
+
+// todo.add();
+// todo.edit(22);
+// todo.delete();
+
+//GENERAL LOOPS AND ITERATION
+
+// for(let i = 0; i < 10; i++){
+// if(i ===2){
+//   console.log('2 is my favorite number');
+//   continue;//keep going with the loop, go to the next iteration
+// }
+// if(i ===5){
+//   break;
+// }
+
+// console.log('Number ' + i);
+
+// }
+
+//White loop
+//one genral rule = for loop when u know how many iteration it si goin to have and while when it is unclear. This is not always blacka nd white.
+
+// let i = 0;
+
+// while(i < 10){
+//   console.log('Number ' + i);
+//   i++;
+// }
+
+//DO WHILE LOOP
+//different becuase it will always run at least once no matter what
+
+// let i = 0; //in this if the i = 100; then it will still run and give output of "Number 100" on the console.
+
+// do{
+//   console.log('Number ' + i);
+//   i++
+// }
+// while(i < 10);
+
+const cars = ['Ford','Chevy','Honda','Toyota'];
+
+// for(let i = 0; i < cars.length; i++){
+//   console.log(cars[i]);
+// }
+
+//For each /foreach loop
+// cars.forEach(function(car){
+//   console.log(car);
+// });
+
+//MAP - used to return a different array
+
+// const users = [
+//   {id:1, name:'John'},
+//   {id:2, name:'Sarah'},
+//   {id:3, name:'Karen'},
+//   {id:4 , name:'steve'}
+// ];
+
+// const ids = users.map(function(user){
+//   return user.id;
+// });
+
+// console.log(ids);
 
