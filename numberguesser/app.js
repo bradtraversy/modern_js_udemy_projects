@@ -40,30 +40,28 @@ guessBtn.addEventListener('click', function(){
   if(isNaN(guess) || guess < min || guess > max){
     setMessage(`Please enter a number between ${min} and ${max}`, 'red');
   }
+  else{
+    // Check if won
+    if(guess === winningNum){
+      // Game over - won
+      gameOver(true, `${winningNum} is correct, YOU WIN!`);
 
-  // Check if won
-  if(guess === winningNum){
-    // Game over - won
-    gameOver(true, `${winningNum} is correct, YOU WIN!`);
-
-  } else {
-    // Wrong number
-    guessesLeft -= 1;
-
-    if(guessesLeft === 0){
-      // Game over - lost
-      gameOver(false, `Game Over, you lost. The correct number was ${winningNum}`);
     } else {
-      // Game continues - answer wrong
+      // Wrong number
+      guessesLeft -= 1;
 
-      // Change border color
-      guessInput.style.borderColor = 'red';
+      if(guessesLeft === 0){
+        // Game over - lost
+        gameOver(false, `Game Over, you lost. The correct number was ${winningNum}`);
+      } else {
+        // Game continues - answer wrong
 
-      // Clear Input
-      guessInput.value = '';
+        // Clear Input
+        guessInput.value = '';
 
-      // Tell user its the wrong number
-      setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red');
+        // Tell user its the wrong number
+        setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red');
+      }
     }
   }
 });
@@ -75,12 +73,9 @@ function gameOver(won, msg){
 
   // Disable input
   guessInput.disabled = true;
-  // Change border color
-  guessInput.style.borderColor = color;
-  // Set text color
-  message.style.color = color;
+
   // Set message
-  setMessage(msg);
+  setMessage(msg,color);
 
   // PLay Again?
   guessBtn.value = 'Play Again';
@@ -95,5 +90,9 @@ function getRandomNum(min, max){
 // Set message
 function setMessage(msg, color){
   message.style.color = color;
+
+  // Change border color
+  guessInput.style.borderColor=color;
+
   message.textContent = msg;
 }
