@@ -36,11 +36,6 @@ game.addEventListener('mousedown', function(e){
 guessBtn.addEventListener('click', function(){
   let guess = parseInt(guessInput.value);
   
-  // Validate
-  if(isNaN(guess) || guess < min || guess > max){
-    setMessage(`Please enter a number between ${min} and ${max}`, 'red');
-  }
-
   // Check if won
   if(guess === winningNum){
     // Game over - won
@@ -66,6 +61,11 @@ guessBtn.addEventListener('click', function(){
       setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red');
     }
   }
+
+  // Validate
+  if(isNaN(guess) || guess < min || guess > max) {
+    setMessage(`Please enter a number between ${min} and ${max}`, 'red'); 
+ }
 });
 
 // Game over
